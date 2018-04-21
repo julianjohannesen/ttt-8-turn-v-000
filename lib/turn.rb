@@ -1,6 +1,5 @@
 def turn(board)
-  puts "Welcome to Tic Tac Toe!"
-  display_board(board)
+
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
@@ -8,7 +7,7 @@ def turn(board)
     move(board, index)
     display_board(board)
   else
-    puts "That space is already occupied."
+    turn(board)
   end
 end
 
